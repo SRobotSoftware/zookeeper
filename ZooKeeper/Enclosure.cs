@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ZooKeeper
 {
@@ -23,7 +20,7 @@ namespace ZooKeeper
         {
             return string.Join(",", Occupants);
         }
-        public void log()
+        public void Log()
         {
             Console.WriteLine($"Name: {Name}");
             Console.WriteLine($"Habitat: {Habitat}");

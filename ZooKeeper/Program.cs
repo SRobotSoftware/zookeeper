@@ -1,72 +1,70 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ZooKeeper
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            var TurtlePen = new Enclosure
+            var turtlePen = new Enclosure
             {
                 Name = "Turtle Pen",
                 Habitat = "Terrarium"
 
             };
-            var ChickenCoop = new Enclosure
+            var chickenCoop = new Enclosure
             {
                 Name = "Chicken Coop",
                 Habitat = "Coop"
             };
-            var Franklin = new Animal
+            var franklin = new Animal
             {
                 Name = "Sea Turtle",
-                Gender = Animal.gender.male,
+                Gender = Animal.gender.Male,
                 Predator = true
             };
-            var Shelly = new Animal
+            var shelly = new Animal
             {
                 Name = "Sea Turtle",
-                Gender = Animal.gender.female,
+                Gender = Animal.gender.Female,
                 Predator = true
             };
-            var Kurt = new Animal
+            var kurt = new Animal
             {
                 Name = "Chicken",
-                Gender = Animal.gender.other,
+                Gender = Animal.gender.Other,
                 Predator = false
             };
-            var Kortknee = new Rhino
+            var kortknee = new Animal
             {
-                
-                Gender = Animal.gender.other,
+                Name = "Rhino",
+                Gender = Animal.gender.Other,
                 Predator = false
             };
-            var Grain = new Food
+            var grain = new Food
             {
                 Name = "Grain",
                 IsLive = false
             };
-            var Sardines = new Food
+            var sardines = new Food
             {
                 Name = "Sardines",
                 IsLive = true
             };
-            Kurt.Eat(Shelly);
+            kurt.Eat(shelly);
             Console.ReadLine();
-            Franklin.Eat(Grain);
+            franklin.Eat(grain);
             Console.ReadLine();
-            Kortknee.Eat(Grain);
+            kortknee.Eat(grain);
+            Console.ReadLine();
+            franklin.Eat(sardines);
             Console.ReadLine();
 
-            TurtlePen.AddOccupant(Shelly);
-            TurtlePen.AddOccupant(Franklin);
-            ChickenCoop.AddOccupant(Kurt);
-            ChickenCoop.AddOccupant(Kortknee);
-            ChickenCoop.log();
+            turtlePen.AddOccupant(shelly);
+            turtlePen.AddOccupant(franklin);
+            chickenCoop.AddOccupant(kurt);
+            chickenCoop.AddOccupant(kortknee);
+            chickenCoop.Log();
             
             Console.ReadLine();
 
